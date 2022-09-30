@@ -1,6 +1,6 @@
 import random
 """
-Matthew Yee
+Matthew Yee, James Yu
 SoftDev
 k04--randomDict - randomly picks a value from a dictionary
 2022-9-22
