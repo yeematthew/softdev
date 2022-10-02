@@ -1,5 +1,5 @@
 """
-Matthew Yee, Jun Hong Wang
+The Hacking Hornets: Matthew Yee, Jun Hong Wang
 SoftDev pd7
 k06 -- StI/O: divine your destiny!
 2022-10-02
