@@ -1,7 +1,11 @@
+'''
+M&(I)M: Matthew Yee, Ian Jiang, May Qiu
+SoftDev
+K08 -- Flask test 4
+2022-10-06
+time spent: 0.1 hours
+'''
 
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
 
 from flask import Flask
 app = Flask(__name__) #create instance of class Flask
@@ -18,3 +22,4 @@ if __name__ == "__main__":  # true if this file NOT imported
 
 # Prediction: Will print "the __name__ of this module is... " and "__main__" to the console,
 # open a browser page that has "No hablo queso!" printed on it.
+# Run results: Actual behavior was same as predicted behavior.
