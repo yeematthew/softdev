@@ -1,8 +1,8 @@
 """
 M & (I)M: Matthew Yee, Ian Jiang, May Qiu
 SoftDev pd7
-k06 -- StI/O: divine your destiny!
-2022-10-02
+k08 -- Occupations in Flask
+2022-10-07
 Time Spent: 
 DISCO:
 * lists and arrays are different in Python, to use arrays, we have to import the module
