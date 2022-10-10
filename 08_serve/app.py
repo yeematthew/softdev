@@ -3,36 +3,7 @@ M & (I)M: Matthew Yee, Ian Jiang, May Qiu
 SoftDev pd7
 k08 -- Occupations in Flask
 2022-10-07
-Time Spent: 
-DISCO:
-* lists and arrays are different in Python, to use arrays, we have to import the module
-* use random.uniform(lower bound, upper bound) instead of randrange if we want to get floats/non-ints
-* split(char) splits a string wherever it sees that character
-QCC:
-* is there a way to do weighted random without having to implement it ourselves?
-HOW THIS SCRIPT WORKS:
-initial idea:
-this should be very similar to what we did in 05, but instead of splitting @ and $, we split newlines and ,
-split file based on newline, store in string
-split each string based on comma, separate the string of occupation and percent
-    if there are quotations at the beginning, only separate the comma at the end
-then for the weighted random part:
-    either use weighted random from random
-    or make our own weighted random implementation
-    
-1) Open file, file.readlines() to split each line into own string and put into list
-2) Call un_csv() to separate the commas
-    loop through each string in list, see if it has a " in it
-    if it does, we call un_comma(substring) to split based on comma between the full occupation and percentage
-    if it doesn't, we can just split(",") to get rid of the comma
-    we convert the string with the number to a float
-    add the information to dictionary, with occupation as the key, and percentage as the value
-3) We randomly choose the occupation by calling rand_occ, which:
-    keeps track of s, the percentages of occupations we subtract
-    then goes into a for loop through the dictionary, generating a random number between 0 and 99.9 - s
-    if that random number is less than the percentage of occupation, then return that occupation
-    else, we add that percentage to s, and we keep going on in the for loop
-    this keeps the original probability of landing on each occupation
+Time Spent: 2
 """
 
 import random
@@ -97,13 +68,31 @@ def rand_occ():
             s += d[n]
 
 
-#main function to run code easily
+#main function to return html for the browser to contain hyperlinks
 def main():
     un_csv()
     d_string = ""
     for x in d:
         d_string += x + "<br>"
-    return("Your job is " + rand_occ() + "<br><br>Job List:<br>" + d_string)
+    occ = rand_occ()
+    url = ""
+    tnpg = "M&(I)M: Ian Jiang, May Qiu, Matthew Yee<br>"
+    #For cases where the name of occupation is not consistent with bls.gov, return link/links correlating with occupation
+    if occ == "Business and Financial operations":
+       return tnpg + 'Your job is <a href="https://www.bls.gov/ooh/business-and-financial/home.htm">'+ occ + "</a>" + "<br><br>Job List:<br>" + d_string
+    elif occ == "Computer and Mathematical":
+        return tnpg + 'Your job is <a href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm">Computer</a> and <a href="https://www.bls.gov/ooh/math/home.htm">math</a>' + "<br><br>Job List:<br>" + d_string
+    elif occ == "Arts, design, entertainment, sports and media":
+        return tnpg + 'Your job is <a href="https://www.bls.gov/ooh/arts-and-design/home.htm">Arts, design</a>, <a href="https://www.bls.gov/ooh/entertainment-and-sports/home.htm">entertainment, sports</a> and <a href="https://www.bls.gov/ooh/media-and-communication/home.htm">media</a>' + "<br><br>Job List:<br>" + d_string
+    elif (occ == "Healthcare support") or (occ == "Healthcare practioners and technical"):
+        return tnpg + 'Your job is <a href="https://www.bls.gov/ooh/healthcare/home.htm">'+ occ + "</a>" + "<br><br>Job List:<br>" + d_string
+    elif occ == "Building and grounds cleaning and maintenance":
+        return tnpg + 'Your job is <a href="https://www.bls.gov/ooh/building-and-grounds-cleaning/home.htm">Building and grounds cleaning</a> and <a href="https://www.bls.gov/ooh/installation-maintenance-and-repair/home.htm">maintenance</a>' + "<br><br>Job List:<br>" + d_string
+    else:
+        #removes commas and replaces spaces with dashes for the url
+        url = occ.replace(',','')
+        url = url.replace(' ','-') 
+    return(tnpg + 'Your job is <a href="https://www.bls.gov/ooh/' + url + '/home.htm">'+ occ + "</a>" + "<br><br>Job List:<br>" + d_string)
 
 
 app = Flask(__name__) #create instance of class Flask
