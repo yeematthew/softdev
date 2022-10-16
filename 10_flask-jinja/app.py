@@ -1,8 +1,10 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+#M&(I)M: Matthew Yee, Ian Jiang, May Qiu
+#SoftDev
+#K10 -- Flask Templates
+#2022-10-13
+#time spent: 0.5 hours
 
-from flask import Flask#, render_template #Q0: What will happen if you remove render_template from this line? (log your prediction before you pull the trigger...)
+from flask import Flask, render_template #Q0: What will happen if you remove render_template from this line? (log your prediction before you pull the trigger...)
 app = Flask(__name__)
 
 @app.route("/")
