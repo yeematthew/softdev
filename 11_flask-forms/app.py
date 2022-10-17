@@ -27,7 +27,7 @@ Process results.
 PROTIP: Insert your own in-line comments
  wherever they will help
   your future self and/or current teammates
-   understand what is going on.
+ what is going on.
 '''
 
 @app.route("/")#, methods=['GET', 'POST'])
