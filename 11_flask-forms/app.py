@@ -1,6 +1,8 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+#M&(I)M: Matthew Yee, Ian Jiang, May Qiu
+#SoftDev
+#K11 -- Flask Forms
+#2022-10-16
+#time spent: 0.5 hours
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -28,7 +30,7 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/")#, methods=(['GET', 'POST'])
+@app.route("/")#, methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -37,8 +39,8 @@ def disp_loginpage():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
     return render_template( 'login.html' )
