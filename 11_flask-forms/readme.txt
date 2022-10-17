@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-)M: Matthew Yee, Ian Jiang, May Qiu
-=======
 M&(I)M: Matthew Yee, Ian Jiang, May Qiu
->>>>>>> fc424b234c55d9af3c466a64d425a57af9361f74
 SoftDev
 K11 -- Flask Forms
 2022-10-16
