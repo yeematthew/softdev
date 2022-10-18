@@ -1,9 +1,10 @@
-#M&(I)M: Matthew Yee, Ian Jiang, May Qiu
+#Flying Karate Masters: Matthew Yee, Kevin Li, Joseph Wu
 #SoftDev
-#K11 -- Flask Forms
-#2022-10-16
+#K12 -- Flask Forms + GET vs POST
+#2022-10-17
 #time spent: 0.5 hours
 
+import re
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -53,15 +54,18 @@ def authenticate():
     print(app)
     print("***DIAG: request obj ***")
     print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
+    print("***DIAG: request.args ***")
+    print(request.args)
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
     print("***REQUEST FORM***")
     print(request.form)
-    return request.form  #response to a form submission
+    if (request.method == 'GET'):
+        return render_template('response.html', username = request.args['username'], method = 'GET')
+    else:
+        return render_template('response.html', username = request.form['username'], method = 'POST')
 
 
     
