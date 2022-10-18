@@ -4,6 +4,7 @@
 #2022-10-16
 #time spent: 0.5 hours
 
+
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -27,18 +28,18 @@ Process results.
 PROTIP: Insert your own in-line comments
  wherever they will help
   your future self and/or current teammates
- what is going on.
+   understand what is going on.
 '''
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/")#, methods=['GET,'POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
     print("***DIAG: request obj ***")
     print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
+    print("***DIAG: request.args ***")
+    print(request.args)
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
@@ -46,22 +47,20 @@ def disp_loginpage():
     return render_template( 'login.html' )
 
 
-@app.route("/auth", methods=['GET', 'POST'])
+@app.route("/auth")#, methods=['GET','POST'])
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
     print("***DIAG: request obj ***")
     print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
+    print("***DIAG: request.args ***")
+    print(request.args)
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    print("***REQUEST FORM***")
-    print(request.form)
-    return request.form  #response to a form submission
+    return "Waaaa hooo HAAAH"  #response to a form submission
 
 
     
