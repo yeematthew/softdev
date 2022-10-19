@@ -1,8 +1,8 @@
 #Flying Karate Masters: Matthew Yee, Kevin Li, Joseph Wu
 #SoftDev
-#K12 -- Flask Forms + GET vs POST
-#2022-10-17
-#time spent: 0.5 hours
+#K14 -- Serve CSS
+#2022-10-19
+#time spent: 0.2 hours
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
