@@ -17,7 +17,7 @@ Margins and padding allow us to format elements on websites, specifically to put
         <link
         rel = "stylesheet"
         type = "text/css"
-        href = "filename"  
+        href = "filename"
         >
     </head>
 ```
@@ -71,38 +71,64 @@ NOTE: If your html and CSS files are stored in different directories, "filename"
 
     NOTE: Percentages (ie: margin: 25%) can be used instead of the number of pixels to make it such that the margins will scale with the window size. The percentages used will be in reference to element containing the class being modified.
 
+    NOTE: Margin will allow for negative values, which will cause the modified element to draw its neighboring elements nearer, and potentially overlap.
+
 5. Padding adds space between the edges of an element and the text it contains. Padding for each side can be changed individually. By default all elements have no padding, but that can be changed by following any of these steps:
 
-1. Step, with
+a. Use
     ```
-    generic code block or terminal command
+    class{
+        padding: 25px;
+    }
     ```
-   and/or...
-    ```javascript
-    var foo = "this that JS tho";
+    To set the width of paddings on all four sides of the element to 25 pixels.
+
+b. Use
     ```
-   and/or...
-    ```python
-    print("this that Python tho")
+    class{
+        padding: 25px 50px;
+    }
     ```
-   and/or...
-1. Step, with [hyperlink](https://xkcd.com)s...
+    To set the top and bottom paddings to 25px, and the right and left paddings to 50 pixels wide.
+
+c. Use
+    ```
+    class{
+        padding: 25px 50px 75px;
+    }
+    ```
+    To set the top padding to 25 pixels, right and left to 50 pixels, and the bottom padding to 75 pixels wide.
+
+d. Use
+    ```
+    class{
+        padding: 25px 50px 75px 100px;
+    }
+    ```
+    To set the top padding to 25 pixels, the right to 50 pixels, the bottom to 75 pixels, and the left to 100 pixels wide.
+
+e. Use
+    ```
+    padding-top: 25px
+    padding-right: 25px
+    padding-bottom: 25px
+    padding-left: 25px
+    ```
+    To set the width of each padding individually.
+
+NOTE: Percentages (ie: padding: 25%) can be used instead of the number of pixels to make it such that the paddings will scale with the window size. The percentages used will be in reference to element containing the class being modified.
 
 
 ### Resources
-* thing1
-* thing2
+* https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+* https://developer.mozilla.org/en-US/docs/Web/CSS/padding
 
 ---
 
-Accurate as of (last update): 2022-mm-dd
+Accurate as of (last update): 2022-10-20
 
-#### Contributors:  
-Clyde "Thluffy" Sinclair  
-Thundercleese, pd2  
-Buttercup, pd7  
-Blossom, pd7  
-Bubbles, pd7  
-Fake Grimlock, pd8  
+#### Contributors:
+The Flying Karate Masters: (Pd 7) Matthew Yee,  Kevin Li,  Joseph Wu
 
 _Note: the two spaces after each name are important! ( <--burn after reading)  _
+
