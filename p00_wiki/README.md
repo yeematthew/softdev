@@ -1,16 +1,16 @@
-#Storytelling Game by Team Flying Karate Masters
+# Storytelling Game by Team Flying Karate Masters
 SoftDev
 P00 -- Storytelling Game
 2022-10-27
 
-##Roster and Roles:
+## Roster and Roles:
 
-###Kevin Li:
-###Joesph Wu:
-###Matthew Yee:
-
-
-##Description:
+### Kevin Li:
+### Joesph Wu:
+### Matthew Yee:
 
 
-##Launch Codes:
+## Description:
+
+
+## Launch Codes:
