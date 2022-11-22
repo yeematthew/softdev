@@ -12,13 +12,16 @@ import json
 
 app = Flask(__name__)    #create Flask object
 
+f = open("key_nasa.txt", "r")
+key = f.read()
+
 # Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+#app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    key = "INSERT KEY HERE" #implement reading of key_nasa.txt?
+    #key = "INSERT KEY HERE" #implement reading of key_nasa.txt?
     response = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={key}")
     #print(response.status_code) # 200 means the request succeeded
 
