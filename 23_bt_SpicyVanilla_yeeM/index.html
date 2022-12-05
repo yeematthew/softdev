@@ -1,0 +1,120 @@
+<!--
+  Spicy Vanilla: Jeremy Kwok and Matthew Yee
+  SoftDev
+  K24 -- Bootstrap Basics
+  2022-12-04
+  time spent: 1 hr
+-->
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Basics</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+
+    <body class="m-5">
+        <h1>Spicy Vanilla</h1>
+        <h2>Roster: Matthew Yee</h2>
+        <br>
+        
+        <h3>Grids</h3>
+        <h5>Grids allow for the creation of up to 12 columns that allow you to evenly align content on the page. Space for each column will be evenly distributed by default, and will scale with window size. (Credit for lorem ipsum generation <a href="https://baconipsum.com/">here</a>.) </h5>
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                Spicy jalapeno bacon ipsum dolor amet brisket pork chop duis exercitation leberkas pig. Cupim aute incididunt venison, pig eiusmod ad esse drumstick. Anim cupim minim non shoulder short ribs. Turducken short ribs esse leberkas jowl veniam. Magna laboris ullamco, hamburger turkey cillum deserunt turducken pork nisi.
+              </div>
+              <div class="col">
+                Spicy jalapeno bacon ipsum dolor amet jowl pork chop tongue enim ut meatloaf, capicola sausage excepteur drumstick sunt. Pork ad consequat, pastrami alcatra commodo tri-tip ea consectetur andouille reprehenderit in. Ea in elit ham hock leberkas beef ribs aute cillum short loin ground round fugiat labore qui. Adipisicing qui boudin culpa pancetta jerky hamburger t-bone strip steak exercitation duis tenderloin incididunt short ribs.
+              </div>
+              <div class="col">
+                Spicy jalapeno bacon ipsum dolor amet t-bone adipisicing eu nulla burgdoggen jerky brisket hamburger enim aute turkey fatback irure. Esse swine alcatra, tri-tip pork filet mignon sint cupim sausage meatloaf labore ut. Frankfurter cow laborum consectetur. Proident t-bone jowl elit boudin dolore dolor. Sirloin fugiat id in.
+              </div>
+            </div>
+            <br>
+            <h5>But this can be changed by allotting more space for specified columns. Note that this will automatically reize the surrounding columns, too.</h5>
+            <div class="row">
+                <div class="col">
+                  Spicy jalapeno bacon ipsum dolor amet brisket pork chop duis exercitation leberkas pig. Cupim aute incididunt venison, pig eiusmod ad esse drumstick. Anim cupim minim non shoulder short ribs. Turducken short ribs esse leberkas jowl veniam. Magna laboris ullamco, hamburger turkey cillum deserunt turducken pork nisi.
+                </div>
+                <div class="col-6">
+                  BIG COLUMN Spicy jalapeno bacon ipsum dolor amet jowl pork chop tongue enim ut meatloaf, capicola sausage excepteur drumstick sunt. Pork ad consequat, pastrami alcatra commodo tri-tip ea consectetur andouille reprehenderit in. Ea in elit ham hock leberkas beef ribs aute cillum short loin ground round fugiat labore qui. Adipisicing qui boudin culpa pancetta jerky hamburger t-bone strip steak exercitation duis tenderloin incididunt short ribs.
+                </div>
+                <div class="col">
+                  Spicy jalapeno bacon ipsum dolor amet t-bone adipisicing eu nulla burgdoggen jerky brisket hamburger enim aute turkey fatback irure. Esse swine alcatra, tri-tip pork filet mignon sint cupim sausage meatloaf labore ut. Frankfurter cow laborum consectetur. Proident t-bone jowl elit boudin dolore dolor. Sirloin fugiat id in.
+                </div>
+              </div>
+        </div>
+          
+        <br>
+        <h3>Badges</h3>
+        <p>Badges can be used to generate hype, and they scale with their parent element. <span class="badge bg-secondary">YEAH!</span></p>
+        <h3>Like this: <span class="badge bg-secondary">BIG WHOOP</span></h3>
+
+        You can also add them to buttons as counters or other indicators.
+        <button type="button" class="btn btn-primary">
+            Messages <span class="badge text-bg-secondary">0</span>
+        </button>
+
+        <br>
+        <br>
+        <h3>Buttons</h3>
+        Buttons can be solid
+        <button type="button" class="btn btn-primary">Click Me!</button>
+        <br>
+        Or outlines
+        <button type="button" class="btn btn-outline-primary">Maybe click me?</button>
+        <br>
+        Or disabled
+        <button type="button" class="btn btn-primary" disabled>Don't click me.</button>
+
+        <br>
+        <br>
+        <h3>Navbar</h3>
+        The Navbar is a very powerful tool, but also one that takes a little more time to implement. Typically this would go at the top of the page, and allow for access to other part of the app, and constant access to the main page and the logout/login button.
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Spicy Vanilla</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Our Founders
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Matthew Yee</a></li>
+                      <li><a class="dropdown-item" href="#">Jeremy Kwok</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">David Chen</a></li>
+                      <li><a class="dropdown-item" href="#">Jing Feng</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Donate</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+
+</html>

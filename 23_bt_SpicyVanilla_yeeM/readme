@@ -1,0 +1,11 @@
+Spicy Vanilla:  Matthew Yee
+SoftDev
+K23 -- Bootstrap Basics
+2022-12-04
+time spent: 1 hr
+
+DISCO:
+- Grids make placing content side by side much easier than just using CSS would make it.
+  - Content within each column will always be center-aligned, but there is likely a way to change that.
+- Bootstrap has a lot of very specific classes, which can affect both the size and color of certain elements.
+- Many of the features that can be implemented anywhere else on the page (ie: buttons, disabled links, dropdowns, search bars) can also be implemented into the navbar.
