@@ -1,27 +1,7 @@
-/*
-   your PPTASK:
-   
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-    		
-    		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-   
-   (delete this block comment once you are done)
-*/
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2023-04-05w
+//Team Frog Riders :: Matthew Yee, Vivian Graeber
+//SoftDev pd7
+//K27 -- Basic functions in JavaScript
+//2023-04-17
 // --------------------------------------------------
 
 
@@ -51,6 +31,7 @@ var o = { 'name' : 'Thluffy',
         };
 
 
+//adds an item to the list
 var addItem = function(text) {
   var list = document.getElementById("thelist");
   var newitem = document.createElement("li");
@@ -59,12 +40,14 @@ var addItem = function(text) {
 };
 
 
+//removes an item from the list
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
   listitems[n].remove();
 };
 
 
+//adds the 'red' class to all items in the list that do not already have it
 var red = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -73,6 +56,7 @@ var red = function() {
 };
 
 
+//adds the 'red' and 'blue' classes to each item in the list in alternating order
 var stripe = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -86,8 +70,51 @@ var stripe = function() {
 
 //insert your implementations here for...
 // FIB
+var fib = function(n) {
+  if (n <= 0) {
+      return 0;
+  } else if (n <= 2) {
+      return 1;
+  } else {
+      return (fib(n - 1) + fib(n - 2));
+  }
+}
+
+
 // FAC
+var fact = function(n) {
+  if (n < 2) {
+      return 1;
+  } else {
+      return (n * fact(n - 1));
+}
+}
+
+
 // GCD
+const gcd = (a, b) => {
+  let l;
+  let s;
+  if (a > b) {
+      l = a;
+      s = b;
+  } else if (b > a) {
+      l = a;
+      s = b;
+  } else {
+      return a;
+  }
+  for (let i = s; i >= 1; i--) {
+      if (((l % i) == 0) && ((s % i) == 0)) {
+          return i;
+      }
+  }
+}
+
+addItem('fib(4) = ' + fib(4));
+addItem('fact(4) = ' + fact(4));
+addItem('gcd(12,18) = ' + gcd(12,18));
+stripe();
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
