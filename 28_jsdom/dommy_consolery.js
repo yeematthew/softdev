@@ -78,7 +78,7 @@ var fib = function(n) {
   } else {
       return (fib(n - 1) + fib(n - 2));
   }
-}
+};
 
 
 // FAC
@@ -88,7 +88,7 @@ var fact = function(n) {
   } else {
       return (n * fact(n - 1));
 }
-}
+};
 
 
 // GCD
@@ -109,7 +109,7 @@ const gcd = (a, b) => {
           return i;
       }
   }
-}
+};
 
 addItem('fib(4) = ' + fib(4));
 addItem('fact(4) = ' + fact(4));
