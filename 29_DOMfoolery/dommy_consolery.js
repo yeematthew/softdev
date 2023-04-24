@@ -115,9 +115,9 @@ var fibbutton = document.getElementById("fib");
 var facbutton = document.getElementById("fac");
 var gcdbutton = document.getElementById("gcd");
 
-fibbutton.addEventListener('click', addItem('fib(4) = ' + fib(4)));
-facbutton.addEventListener('click', addItem('fact(4) = ' + fact(4)));
-gcdbutton.addEventListener('click', addItem('gcd(12,18) = ' + gcd(12,18)));
+fibbutton.addEventListener('click', ()=>{addItem('fib(4) = ' + fib(4))});
+facbutton.addEventListener('click', ()=>{addItem('fact(4) = ' + fact(4))});
+gcdbutton.addEventListener('click', ()=>{addItem('gcd(12,18) = ' + gcd(12,18))});
 
 stripe();
 
